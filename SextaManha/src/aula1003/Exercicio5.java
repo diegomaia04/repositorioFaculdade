@@ -15,13 +15,13 @@ public class Exercicio5
 		System.out.print("Digite seu sexo (M/F): ");
 		char sexo = input.next().charAt(0);
 		
-		System.out.print("Digite sua altura (em m): ");
+		System.out.print("Digite sua altura (em cm): ");
 		double altura = input.nextDouble();
 		
 		if (Character.toUpperCase(sexo) == 'M') {
-		    System.out.printf("Seu peso ideal é %.2f kg.", (72.7 * altura) - 58);
+		    System.out.printf("Seu peso ideal é %.2f kg.", (72.7 * (altura / 100)) - 58);
 		} else if (Character.toUpperCase(sexo) == 'F') {
-		    System.out.printf("Seu peso ideal é %.2f kg.", (62.1 * altura) - 44.7);
+		    System.out.printf("Seu peso ideal é %.2f kg.", (62.1 * (altura / 100)) - 44.7);
 		} else {
 		    System.out.printf("Dados inválidos. Por favor, tente novamente");
 		}
