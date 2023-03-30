@@ -8,6 +8,6 @@ package lista04;
  *
  * @author maiad
  */
-public class Ex06 {
+public class Ex07 {
     
 }
