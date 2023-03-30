@@ -22,9 +22,9 @@ public class Ex04 {
         n = e.nextInt();
         
         if (n%2==0) {
-            System.out.println("%d e par\n" + n);
+            System.out.printf("%d e par\n", n);
         } else {
-          System.out.println("%d e impar\n" + n);
+                System.out.printf("%d e impar\n", n);
         }
     }
     
