@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package lista04;
 
@@ -8,35 +8,24 @@ import java.util.Scanner;
 
 /**
  *
- * @author maiad
+ * @author 12523169668
  */
 public class Ex04 {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        int numero, poi;
-
-        System.out.print("Digite numero: ");
-        numero = entrada.nextInt();
-        poi = (numero & 2);
-
-        if (poi == 2) {
-
-            System.out.println("O numero digitado " + numero + " é par");
-            if (numero <= -1) {
-                System.out.println("O numero digitado é negativo");
-            } else {
-                System.out.println("O numero digitado é positivo");
-            }
+        int n;
+        Scanner e  = new Scanner(System.in);
+        System.out.println("Insira o numero");
+        n = e.nextInt();
+        
+        if (n%2==0) {
+            System.out.println("%d e par\n" + n);
         } else {
-            System.out.println("O numero digitado " + numero + " é ímpar");
-            if (numero <= -1) {
-                System.out.println("O numero digitado é negativo");
-            } else {
-                System.out.println("O numero digitado é positivo");
-            }
-
+          System.out.println("%d e impar\n" + n);
         }
-
     }
+    
 }
