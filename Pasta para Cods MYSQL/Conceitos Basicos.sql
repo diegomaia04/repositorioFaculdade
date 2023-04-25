@@ -5,7 +5,7 @@ SQL -- DLL / SQL --DML / SQL -- DCL
 
 -- DLL - Create, Drop, Alter
 
--- DML - 
+-- DML - CRUD
 
 -- DCL -
 
