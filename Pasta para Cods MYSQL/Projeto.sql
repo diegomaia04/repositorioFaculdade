@@ -1,35 +1,39 @@
-create database projeto;
-use projeto;
+-- CRIAR O BANCO DE DADOS PROJETO E ACESSAR ELE
+CREATE DATABASE PROJETO;
 
-create table empregado(
-Cod_Emp int primary key auto_increment,
-nome varchar (30) not null,
-sobrenome varchar(30) not null,  
-CPF char (11)not null,
-salario float not null, 
-Cod_depto int not null,
-foreign key(Cod_depto) references departamento(Cod_depto)
+USE PROJETO;
+
+CREATE TABLE DEPARTAMENTO (
+COD_DEPTO INT NOT NULL PRIMARY KEY,
+NOME VARCHAR (30) NOT NULL
 );
 
-create table departamento (
-nome varchar(30),
-Cod_depto int primary key auto_increment
+CREATE TABLE PROJETO (
+COD_PROJ INT NOT NULL PRIMARY KEY,
+NOME VARCHAR (30)NOT NULL,
+DATAINI DATE,
+DATAFIM DATE,
+DURACAO INT
 );
 
-create table trabalha(
-Cod_Emp int not null,
-Cod_proj int not null,
-foreign key(Cod_Emp) references empregado(Cod_Emp),
-foreign key(Cod_proj) references projeto(Cod_proj)
+CREATE TABLE EMPREGADO (
+COD_EMP INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+NOME VARCHAR (30) NOT NULL,
+SOBRENOME VARCHAR (30) NOT NULL,
+CPF CHAR (11) NOT NULL,
+ENDERECO VARCHAR (100),
+SALARIO FLOAT NOT NULL,
+COD_DEPTO INT NOT NULL
 );
 
-create table projeto(
-Cod_proj int primary key auto_increment not null,
-Nome varchar(30) not null,
-DataIni date,
-DataFim date,
-Duracao int
+
+ALTER TABLE EMPREGADO
+ADD CONSTRAINT FK_DEPTO FOREIGN KEY (COD_DEPTO) REFERENCES DEPARTAMENTO (COD_DEPTO);
+
+CREATE TABLE TRABALHA (
+COD_EMP INT NOT NULL,
+COD_PROJ INT NOT NULL,
+CONSTRAINT PK_TRABALHA PRIMARY KEY (COD_EMP, COD_PROJ),
+CONSTRAINT FK_EMP FOREIGN KEY (COD_EMP) REFERENCES EMPREGADO (COD_EMP),
+CONSTRAINT FK_PROJ FOREIGN KEY (COD_PROJ) REFERENCES PROJETO (COD_PROJ)
 );
-
-show tables;
-
