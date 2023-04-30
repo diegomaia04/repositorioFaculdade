@@ -8,20 +8,21 @@ package funcao;
  *
  * @author maiad
  */
-public class Ex07 {
-
+public class Ex08 {
     public static void main(String[] args) {
-
-        int resultado = fibonacci(5);
-        System.out.println(resultado);
+        
     }
-
-    public static int fibonacci(int n) {
-        if (n <= 1) {
-            return n;
-        } else {
-            return fibonacci(n - 1) + fibonacci(n - 2);
-        }
+    
+    /**
+     *
+     * @return
+     */
+    public static String ehPalidrimo(){
+        
+        
+        return null;
+        
+        
     }
-
+    
 }

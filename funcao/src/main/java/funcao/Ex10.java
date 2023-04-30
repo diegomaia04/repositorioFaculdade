@@ -8,20 +8,18 @@ package funcao;
  *
  * @author maiad
  */
-public class Ex07 {
+public class Ex10 {
 
     public static void main(String[] args) {
+        double Resultado = imc(50,1.70);
+        System.out.println("Resultado: " + Resultado);
 
-        int resultado = fibonacci(5);
-        System.out.println(resultado);
     }
 
-    public static int fibonacci(int n) {
-        if (n <= 1) {
-            return n;
-        } else {
-            return fibonacci(n - 1) + fibonacci(n - 2);
-        }
-    }
+    public static double imc(double peso, double altura) {
+       // IMC = Massa (kg) ÷ Altura (m)².
+        double imc =  peso / (altura*altura);
+        return imc;
 
+    }
 }
