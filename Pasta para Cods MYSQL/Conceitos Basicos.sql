@@ -128,5 +128,5 @@ ORDER BY NOME ASC;
 
 -- funções de agregações(Sum(soma), AVG(media), MAX(maior), count(contador))
 -- SUM - Somar o salario dos empregados
-select sum(salario) from  empregado;
+select sum(salario) from empregado;
 
