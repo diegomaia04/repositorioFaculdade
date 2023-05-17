@@ -84,6 +84,9 @@ select * from departamento;
            ('RODOLFO,', 'ARIEL', 13131313111, 3000.00, 101),
            ('GUSTAVO', 'ROSSETTI', 14141422222, 2000.00, 104),
            ('JOÃO', 'PEDRO', 15151515888, 3000.00, 103);
+           
+           insert into empregado (NOME, SOBRENOME, CPF, SALARIO, COD_DEPTO) values ('luciano', 'alves', 15879+5888, 3500.00, 104);
+            insert into empregado (NOME, SOBRENOME, CPF, SALARIO, COD_DEPTO) values ('weligton', 'mouse', 15879+5888, 3500.00, 101);
     
 -- dando update nas iformaçooes da tabela empregado
 select * from empregado;
@@ -128,5 +131,80 @@ ORDER BY NOME ASC;
 
 -- funções de agregações(Sum(soma), AVG(media), MAX(maior), count(contador))
 -- SUM - Somar o salario dos empregados
-select sum(salario) from empregado;
+select sum(salario) from  empregado where salario <3000;
+
+
+-- AVG- fazer media dos salarios
+select avg(salario) from empregado;
+
+-- MIN - menor valor
+select min(salario) from empregado;
+
+-- MAX - maior salarrio
+select max(salario) from empregado;
+
+-- contar quantos empregados existem em cada departamento pelo codigod do depaartmentp
+select cod_depto, count(cod_depto) from empregado group by cod_depto;
+
+-- descobiri a soma dos salarios dos empregados para cada departamento
+select sum(salario), count(cod_depto) from empregado group by cod_depto;
+
+-- Aumentar o Salario dos empregadso em 10%
+update empregado
+set salario = salario +(salario *0.1);
+
+-- permitir todas os updates dentro das tabelas.
+set sql_safe_updates = 0;
+
+-- alterar a tabela empregado e incluir a coluna cidade com tipo de dado varchar(30)
+-- atualaizar os registros dos empregados de coigod 1000, 1001 e 1002 para a cidade de são paulo
+-- dos empregados de codigo 1003, 1005 para cidade de rio janeiro
+-- empregado de coigod paara cuiaba
+
+alter table empregado add column cidade varchar(30);
+select * from empregado;
+
+-- alterar o nuemro do cod_emp para o empregado dessejado.
+update empregado set cidade = 'São Paulo' where cod_emp = 1005; 
+update empregado set cidade = 'Rio de Janeiro' where cod_emp = 1008; 
+update empregado set cidade = 'Cuiaba' where cod_emp = 1007; 
+
+-- inserir tabela projeto
+select * from projeto;
+delete from projeto;
+
+insert into projeto(cod_proj, nome) 
+values(10, 'projeto aplicativo'), (20, 'projeto aplicativo');
+
+INSERT INTO PROJETO
+	VALUES (30, 'ALPHA', '20230616', '20230716', 30),
+		   (40, 'BETA',  '20230516', '20230716', 60),
+           (50, 'GAMA',  '20230530', '20230730', 60);
+           
+-- definir para cada projeto cirado 2 empregados
+select * from trabalha;
+
+insert into trabalha(cod_emp, cod_proj) values( 1003, 10) ,( 1004, 10);
+insert into trabalha(cod_emp, cod_proj) values( 1005, 20) ,( 1006, 20);
+insert into trabalha(cod_emp, cod_proj) values( 1007, 30) ,( 1008, 30);
+insert into trabalha(cod_emp, cod_proj) values( 1009, 40) ,( 1011, 40);
+insert into trabalha(cod_emp, cod_proj) values( 1012, 50) ,( 1013, 50);
+
+delete from trabalha;
+
+-- econtar os codigos dos empregados que possiem ums salario maior que 200 e moram em cuiaba
+select cod_emp, nome from empregado where salario > 2000 and cidade = 'cuiaba';
+
+-- lsitar os nomes dos empregados que vivem no rio de janeiro ou belo horizonte
+select cod_emp, nome from empregado where cidade = 'rio de janeiro' or cidade = 'cuiaba';
+
+-- descobir o codigo do departamento de cada empregado
+select empregado.nome, departamento.nome from empregado, departamento;
+ 
+
+
+
+
+
+
 
