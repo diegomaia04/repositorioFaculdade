@@ -200,6 +200,62 @@ select cod_emp, nome from empregado where cidade = 'rio de janeiro' or cidade = 
 
 -- descobir o codigo do departamento de cada empregado
 select empregado.nome, departamento.nome from empregado, departamento;
+
+-- buscar os nomes dos empregados quetrabalham no departamento informatica
+select empregado.nome from empregado, departamento
+where empregado.cod_depto = departamento.cod_depto
+and departamento.nome = ' INFORMÁTICA';
+
+-- BUSCAR OS NOMES DOS EMPREGADOS QUE TRABALHAM NO DEPARTAMENTO INFORMÁTICA
+SELECT EMPREGADO.NOME AS NOME_EMP, DEPARTAMENTO.COD_DEPTO, DEPARTAMENTO.NOME AS NOME_DEPTO FROM EMPREGADO, DEPARTAMENTO
+WHERE EMPREGADO.COD_DEPTO = DEPARTAMENTO.COD_DEPTO
+AND DEPARTAMENTO.NOME = 'INFORMÁTICA';
+
+-- BUSCAR NOME E ENDEREÇO DOS EMPREGADOS QUE RESIDEM NA CIDADE DE SAO PAULO, 
+-- POSSUEM SALARIO MAIOR QUE 2000 E NOME DO DEPARTAMENTO = RH
+SELECT EMPREGADO.NOME, EMPREGADO.ENDERECO FROM EMPREGADO, DEPARTAMENTO 
+WHERE EMPREGADO.CIDADE = 'SÃO PAULO' AND EMPREGADO.SALARIO > 2000.0 
+AND DEPARTAMENTO.NOME = 'RH';
+
+-- listar os nomes dos empregados que gtrabalham no departamento de informatica
+-- subconsulta
+select nome from empregado
+
+where cod_depto in (select cod_depto from departamento where nome = 'INFORMÁTICA');
+
+select * from empregado;
+
+-- lsitar os nomes dos empregados que moraom na mesma cidade que p empregado rodoflfo
+
+select nome from empregado
+where nome <> 'rodolfo,' and cidade in (select cidade from empregado where nome = 'rodolfo,');
+
+select nome from empregado
+where nome <> 'rodolfo,' and cidade in (select cidade from empregado where nome = 'rodolfo,');
+
+-- bsucar os nomes dos empregados que trabalham no projeto codigo 10 e 20
+
+select nome from empregado where cod_emp
+in (select cod_emp from trabalha where cod_proj = 10 or cod_proj = 20);
+
+select * from projeto;
+
+-- buscar os proetos que não possuem data inicio
+
+select * from projeto where dataini is null;
+
+-- buscar  os porjetos que possuem data fim
+
+select * from projeto where datafim is not null;
+
+-- bsucam os nomes dos empregados que trabalham no projeto alpha
+
+select e.nome from empregado e, projeto p, trabalho t
+where e.cod_emp = t.cod_emp
+and p.cod_proj = t.cod_proj
+and p.nome = 'alpha';
+
+-- bsucar a media salarial dos empregados que trabalham no departamento recursos humanos.
  
 
 
