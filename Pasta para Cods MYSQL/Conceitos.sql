@@ -10,10 +10,11 @@ SQL -- DLL / SQL --DML / SQL -- DCL
 -- DCL -
 
 */
-
 -- Criar e acessar o Banco de Dados
 create database teste;
 use teste;
+-- acessar o banco de dados do PROJETO
+use PROJETO;
 
 -- Criar Tabela no Banco de Dados
 create table teste(
@@ -52,22 +53,27 @@ select * from teste;
 insert into teste(codigo, nome, descricao) values ('1','Diego', 'teste para ver a funcionalidade do banco e tabela');
 
 -- Comandos DML
+
+-- comandos para selecinar o conteudo daas tabeelas
+select * from departamento;
+select * from projeto;
+select * from trabalha;
+select * from empregados;
+
 -- selecionar empregados com slaarios maior que 2000 reias
 select nome, cod_emp from empregado where salario > 2000;
 
 -- Inserir dados na tabela departamento
-insert into departamento (cod_depto, nome) values(100, 'RECURSOS HUMANOS');
-insert into departamento values(101, 'VENDAS');
-
+insert into departamento (cod_depto, nome) 
+values(100, 'RECURSOS HUMANOS');
+insert into departamento 
+values(101, 'VENDAS');
 insert into departamento 
 values (102, 'CONTABILIDADE'),
 	   (103, ' INFORMÁTICA'),
        (104, 'ADMINISTRAÇÃO');
-       
-select * from departamento;
 
 -- inserindo dados na tabela empregado
-
     INSERT INTO EMPREGADO
 	(NOME, SOBRENOME, CPF, ENDERECO, SALARIO, COD_DEPTO)
     VALUES ('VICTOR', 'SILVA', '12345678910', 'AVENIDA PAULISTA, 2000', 1000.00, 103);
@@ -84,12 +90,12 @@ select * from departamento;
            ('RODOLFO,', 'ARIEL', 13131313111, 3000.00, 101),
            ('GUSTAVO', 'ROSSETTI', 14141422222, 2000.00, 104),
            ('JOÃO', 'PEDRO', 15151515888, 3000.00, 103);
-           
-           insert into empregado (NOME, SOBRENOME, CPF, SALARIO, COD_DEPTO) values ('luciano', 'alves', 15879+5888, 3500.00, 104);
-            insert into empregado (NOME, SOBRENOME, CPF, SALARIO, COD_DEPTO) values ('weligton', 'mouse', 15879+5888, 3500.00, 101);
+           insert into empregado (NOME, SOBRENOME, CPF, SALARIO, COD_DEPTO) 
+           values ('luciano', 'alves', 15879+5888, 3500.00, 104);
+            insert into empregado (NOME, SOBRENOME, CPF, SALARIO, COD_DEPTO) 
+            values ('weligton', 'mouse', 15879+5888, 3500.00, 101);
     
 -- dando update nas iformaçooes da tabela empregado
-select * from empregado;
 update empregado set salario = 1500.00 where cod_emp = 1;
 update empregado set endereco = 'Faria lima, 500' where  cod_emp = 2;
 
@@ -101,9 +107,6 @@ set sql_safe_updates = 0;
 select cod_emp from empregado where nome = 'VICTOR' and sobrenome  = 'SILVA';
 delete from empregado where cod_emp = 1010; 
 
--- excluir varias linhas sem o where
-delete from empregado;
-
 -- exercico fazer o insert de doiss registros na atabela projeto e vinuclar um empregado a cada prjeto criado
 
 INSERT INTO Projeto 
@@ -114,8 +117,6 @@ INSERT INTO Projeto
     INSERT INTO Trabalha
 	(cod_emp, cod_proj)
     VALUES (4, 1), (5, 2);
-    
-select * from trabalha; 
     
 -- Função de agregação
 -- Buscar na tabela empregado nome e sobrenome dos empregados quemoram em avenidas
@@ -132,7 +133,6 @@ ORDER BY NOME ASC;
 -- funções de agregações(Sum(soma), AVG(media), MAX(maior), count(contador))
 -- SUM - Somar o salario dos empregados
 select sum(salario) from  empregado where salario <3000;
-
 
 -- AVG- fazer media dos salarios
 select avg(salario) from empregado;
@@ -160,7 +160,6 @@ set sql_safe_updates = 0;
 -- atualaizar os registros dos empregados de coigod 1000, 1001 e 1002 para a cidade de são paulo
 -- dos empregados de codigo 1003, 1005 para cidade de rio janeiro
 -- empregado de coigod paara cuiaba
-
 alter table empregado add column cidade varchar(30);
 select * from empregado;
 
@@ -170,9 +169,6 @@ update empregado set cidade = 'Rio de Janeiro' where cod_emp = 1008;
 update empregado set cidade = 'Cuiaba' where cod_emp = 1007; 
 
 -- inserir tabela projeto
-select * from projeto;
-delete from projeto;
-
 insert into projeto(cod_proj, nome) 
 values(10, 'projeto aplicativo'), (20, 'projeto aplicativo');
 
@@ -181,16 +177,12 @@ INSERT INTO PROJETO
 		   (40, 'BETA',  '20230516', '20230716', 60),
            (50, 'GAMA',  '20230530', '20230730', 60);
            
--- definir para cada projeto cirado 2 empregados
-select * from trabalha;
-
+-- definir para cada projeto criado 2 empregados
 insert into trabalha(cod_emp, cod_proj) values( 1003, 10) ,( 1004, 10);
 insert into trabalha(cod_emp, cod_proj) values( 1005, 20) ,( 1006, 20);
 insert into trabalha(cod_emp, cod_proj) values( 1007, 30) ,( 1008, 30);
 insert into trabalha(cod_emp, cod_proj) values( 1009, 40) ,( 1011, 40);
 insert into trabalha(cod_emp, cod_proj) values( 1012, 50) ,( 1013, 50);
-
-delete from trabalha;
 
 -- econtar os codigos dos empregados que possiem ums salario maior que 200 e moram em cuiaba
 select cod_emp, nome from empregado where salario > 2000 and cidade = 'cuiaba';
@@ -220,36 +212,26 @@ AND DEPARTAMENTO.NOME = 'RH';
 -- listar os nomes dos empregados que gtrabalham no departamento de informatica
 -- subconsulta
 select nome from empregado
-
 where cod_depto in (select cod_depto from departamento where nome = 'INFORMÁTICA');
-
 select * from empregado;
 
 -- lsitar os nomes dos empregados que moraom na mesma cidade que p empregado rodoflfo
-
 select nome from empregado
 where nome <> 'rodolfo,' and cidade in (select cidade from empregado where nome = 'rodolfo,');
-
 select nome from empregado
 where nome <> 'rodolfo,' and cidade in (select cidade from empregado where nome = 'rodolfo,');
 
 -- bsucar os nomes dos empregados que trabalham no projeto codigo 10 e 20
-
 select nome from empregado where cod_emp
 in (select cod_emp from trabalha where cod_proj = 10 or cod_proj = 20);
 
-select * from projeto;
-
 -- buscar os proetos que não possuem data inicio
-
 select * from projeto where dataini is null;
 
 -- buscar  os porjetos que possuem data fim
-
 select * from projeto where datafim is not null;
 
 -- bsucam os nomes dos empregados que trabalham no projeto alpha
-
 select e.nome from empregado e, projeto p, trabalho t
 where e.cod_emp = t.cod_emp
 and p.cod_proj = t.cod_proj
