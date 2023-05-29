@@ -41,7 +41,7 @@ CREATE TABLE Sistema (
     DATA_LACAMENTO DATE,
     ID_Aluno int not null,
     CONSTRAINT ID_Aluno FOREIGN KEY (ID_Aluno) REFERENCES ALUNO (COD_RA),
-	ID_Professor int not null,
+    ID_Professor int not null,
     CONSTRAINT ID_Professor FOREIGN KEY (ID_Professor) REFERENCES PROFESSOR (ID_PROF)
 );
 
