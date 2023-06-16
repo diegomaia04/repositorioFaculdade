@@ -117,10 +117,9 @@ public class tela3 extends JFrame {
 					btnCep.setEnabled(false);
 					cbcPag.setEnabled(true);
 					btnFinalizar.setEnabled(true);
-				
-				} 
-			
-				
+
+				}
+
 			}
 		});
 		rdbtnBalcoDaLoja.setBackground(new Color(0, 204, 255));
@@ -132,7 +131,7 @@ public class tela3 extends JFrame {
 		rdbtnDelievry = new JRadioButton();
 		rdbtnDelievry.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			if (rdbtnDelievry.isSelected()) {
+				if (rdbtnDelievry.isSelected()) {
 					rdbtnBalcoDaLoja.setSelected(false);
 					txtCep.setEnabled(true);
 					txtCidade.setEnabled(true);
@@ -145,7 +144,7 @@ public class tela3 extends JFrame {
 					btnFinalizar.setEnabled(true);
 					cbcPag.setEnabled(true);
 				}
-			
+
 			}
 		});
 		rdbtnDelievry.setBackground(new Color(102, 204, 255));
@@ -186,7 +185,7 @@ public class tela3 extends JFrame {
 
 		txtCep = new JTextField();
 		txtCep.setEnabled(false);
-		txtCep.setBounds(62, 83, 96, 19);
+		txtCep.setBounds(52, 80, 106, 22);
 		contentPane.add(txtCep);
 		txtCep.setColumns(10);
 
@@ -203,25 +202,25 @@ public class tela3 extends JFrame {
 		txtCidade = new JTextField();
 		txtCidade.setEnabled(false);
 		txtCidade.setColumns(10);
-		txtCidade.setBounds(64, 145, 96, 19);
+		txtCidade.setBounds(64, 142, 96, 25);
 		contentPane.add(txtCidade);
 
 		txtBairro = new JTextField();
 		txtBairro.setEnabled(false);
 		txtBairro.setColumns(10);
-		txtBairro.setBounds(208, 143, 96, 19);
+		txtBairro.setBounds(208, 141, 96, 25);
 		contentPane.add(txtBairro);
 
 		txtNumero = new JTextField();
 		txtNumero.setEnabled(false);
 		txtNumero.setColumns(10);
-		txtNumero.setBounds(344, 114, 68, 19);
+		txtNumero.setBounds(344, 112, 68, 25);
 		contentPane.add(txtNumero);
 
 		txtComplemento = new JTextField();
 		txtComplemento.setEnabled(false);
 		txtComplemento.setColumns(10);
-		txtComplemento.setBounds(122, 174, 182, 19);
+		txtComplemento.setBounds(122, 174, 182, 22);
 		contentPane.add(txtComplemento);
 
 		JLabel lblFormaDePagamento = new JLabel("Forma de pagamento");
@@ -232,7 +231,8 @@ public class tela3 extends JFrame {
 
 		cbcPag = new JComboBox();
 		cbcPag.setEnabled(false);
-		cbcPag.setModel(new DefaultComboBoxModel(new String[] {"Selecionar Pagamento", "Dinheiro", "Pix", "Cart\u00E3o de Debito", "Cart\u00E3o de Credito", "VR"}));
+		cbcPag.setModel(new DefaultComboBoxModel(new String[] { "Selecionar Pagamento", "Dinheiro", "Pix",
+				"Cart\u00E3o de Debito", "Cart\u00E3o de Credito", "VR" }));
 		cbcPag.setBounds(182, 221, 156, 21);
 		contentPane.add(cbcPag);
 
@@ -240,18 +240,16 @@ public class tela3 extends JFrame {
 		btnFinalizar.setEnabled(false);
 		btnFinalizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (rdbtnDelievry.isSelected() ) {
+				if (rdbtnDelievry.isSelected()) {
 					finalizar();
 				} else if (cbcPag.getSelectedItem().equals("Selecionar Pagamento")) {
 					JOptionPane.showMessageDialog(null, "Preencha a forma de pagamento");
-				} 
-				  if (cbcPag.getSelectedItem().equals("Selecionar Pagamento")) {
-					JOptionPane.showMessageDialog(null, "Preencha a forma de pagamento");
-				} else if (rdbtnBalcoDaLoja.isSelected() ) {
-					JOptionPane.showMessageDialog(null,
-							"Obrigado por escolher nossa Sorveteria!!! Estaremos a sua espera!");
 				}
 				
+				if (rdbtnBalcoDaLoja.isSelected()) {
+					finalizar1();
+				}
+
 			}
 		});
 		btnFinalizar.setBackground(new Color(30, 144, 255));
@@ -276,13 +274,13 @@ public class tela3 extends JFrame {
 		txtEndereco = new JTextField();
 		txtEndereco.setEnabled(false);
 		txtEndereco.setColumns(10);
-		txtEndereco.setBounds(87, 113, 182, 19);
+		txtEndereco.setBounds(87, 111, 182, 28);
 		contentPane.add(txtEndereco);
 
 		txtEstado = new JTextField();
 		txtEstado.setEnabled(false);
 		txtEstado.setColumns(10);
-		txtEstado.setBounds(370, 143, 90, 19);
+		txtEstado.setBounds(370, 143, 90, 27);
 		contentPane.add(txtEstado);
 	}// fim do construtor
 
@@ -353,6 +351,18 @@ public class tela3 extends JFrame {
 			JOptionPane.showMessageDialog(null,
 					"Obrigado por escolher nossa Sorveteria!!! Seu pedido chegará em Breve");
 		}
+
+	}
+
+	private void finalizar1() {
+		if (cbcPag.getSelectedItem().equals("Selecionar Pagamento")) {
+		JOptionPane.showMessageDialog(null, "Preencha a forma de pagamento");
+	} else if (rdbtnBalcoDaLoja.isSelected() ) {
+		JOptionPane.showMessageDialog(null,
+				"Obrigado por escolher nossa Sorveteria!!! Estaremos a sua espera!");
+	}
+		
+		
 
 	}
 }// fim do codigo
