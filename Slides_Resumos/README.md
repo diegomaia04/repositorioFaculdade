@@ -56,4 +56,48 @@ ordens de relização: a, b, c, d.
 
  - janela de tempo: cada janela de tempo executa um processo por vez, se não executou vai para o final da final, em cada janela a cpu se dediqua 100%
 
- - Windows; Colaborativo, cada processo decide pela execução, cada sfotware decide pela prorpia execução, sistema flexivel
+ - Windows; Colaborativo, cada processo decide pela execução, cada sfotware decide pela prorpia execução, sistema flexivel,prioriza o usuairo e não o sistema
+
+
+- Escalanador de prioridade
+   
+   * ordem definido por prioridade
+   * não limite de tempo
+   * desvantagem: estagnação
+   * solução: prioridade dinamica
+
+   ### Arquitetura de SO'Sistemas
+
+   - Desenvolvimento
+   - Camadas
+   - Monolitco
+   - Microkennel
+   - maquina virtual
+
+----------------
+   * A Camadas
+
+       Hieraquia de funções
+       -
+       Nivel e abstração
+
+  * B Monolitico
+
+       Linux
+       -
+       Grandes Blocos
+       Conjuto de tarefas comuns
+
+
+  * C MiicroKennel
+
+      Windows
+      -
+
+  *  D Maquina Virtual
+
+      Java
+      -
+      java machine virtual
+      object java
+      
