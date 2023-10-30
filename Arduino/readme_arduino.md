@@ -1,5 +1,7 @@
 # Projeto de extensão na área de Robótica
 
+### Aula do dia 23/10/2023
+
 
 Ideia Principal: Construir um robo que se mova de forma sozinha que percorra em um labirinto
 
@@ -14,7 +16,9 @@ Descobrir a sua funcionalidade do Arduino e como funiconna na vida real
 Pense no Arduino como o hardware dee um computador
 - Placa mae, processador, HD e memoria
 
-- - Os pinos do arduino serão digitais, Normalmente se utiliza a usb conectada ao computador
+- Os pinos do arduino serão digitais, Normalmente se utiliza a usb conectada ao computador
+
+- Todos os pinos do arduino são de envios ou receber sinais, porque ele é acionado por sinal eletrico de 5V
 
 - Os pinos são de entrada e saída digital
   * GND = bit 0
@@ -99,3 +103,23 @@ void loop()
 }
 }
 ```
+
+### aula do dia 30/10/2023
+
+- Explicaçaõ de bibliotecas no arduino
+- continuação da aula passada com programação do arduino
+
+- Software Arduino IDE comentado na aulaserve para qualuqer aplicação
+
+- Já o hardware depende da aplicação que voce ira seguir.
+
+- Baixar a versão de desenvolvimento do arduino = Arduino.Ide
+
+- No proprio site do arduino tem toda a docuemntação sobre varias placas e aplicações sobre o arduino
+
+- Na IDE já existem codigos prontos depdenndo da aplicação. Vimos como no exemplo na aula, caso não aja, só é preciso baixar a biblioteca
+
+- Explicação de compoentntes de entrdaa e saida de componetes do arduino utilizando o tinkercard
+
+- Arduino desevolvido no tinkercard com Motor e bateria de 9 volts com conversis de cinco volts, ver diagrama e docuemntação
+
