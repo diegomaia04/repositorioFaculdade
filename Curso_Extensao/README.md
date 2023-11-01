@@ -1,6 +1,7 @@
 # Lógica, algoritmos e programação e orientação a objetos - Aulas
 
 ### Aula 18/10
+* Ideação!
 
 * Apresentação do Curso e do professor
 
@@ -15,4 +16,9 @@
 svg: um grafico em forma de vetor para design, não é pixel
 
 * foi utilizado o desing feito pelo professor pois ja esta sendo utilizado o usso de vgs e ideias do proprio.
+* 
+
+### Aula 01/11
+
+
 
