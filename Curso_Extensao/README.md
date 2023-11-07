@@ -9,7 +9,7 @@
 
  * Iremos desenvolver um projeto full-stack sobre um sistema de extensivo para a sociedade  que será de adoção de animais como uma ong.
 
- * iremos utilizar as linguangens js e html com frameworks para ajudar.
+ * iremos utilizar as linguangens html, css e javascript com frameworks para ajudar.
 
 * no figma aciramos e desenvolvemos as telas pricnipais do nosso projeto
 
@@ -21,6 +21,52 @@ svg: um grafico em forma de vetor para design, não é pixel
 
 - SCRUMFAST: é um framework leve que ajuda as pessoas, times e organizações a gerar valor por meio de soluções adaptativas para problemas complexos. Ele é baseado no empirismo e no Lean Thinking, e é construído sobre a inteligência coletiva das pessoas que o utilizam.
        Forma de acompanhamento agil de um projeto.
+
+- Inico do desenvolvimento no VSC ( Visual Studio Code)
+
+- Foi baixado node.js para a realização do projeto
+
+Muitos frameworks serão utilizados para a continuação do desneivlvimento do rpoejto:
+
+  - React:  biblotecaJS para front-end, manipulação de dados e de elemntos para o html, contrução de componenetes
+    
+    DOM: document object model ou modelo de documento de objeto que reescontroi toda e qualquer pagina da internet a partir do html, css e javascript
+
+NPM: quando voce quer fazer uma instalação local de alguma dependecia ou de algum elemento espeficido
+
+NPX: quando voce quer usar algum recurso sem precisar instalar localmente
+
+### ! Caso der ruim a utilização ddo NPM ou Node.js ver o seguinnte video e seguir os passos!
+
+🤖[Correção do caminho do Node.js](https://www.youtube.com/watch?v=hiVKXJ2hAdo)
+
+    
+    npx create-next-app petWeb-app 
+
+  -----------
+
+etapas:
+
+    √ Would you like to use TypeScript? ... (No) / Yes
+    √ Would you like to use ESLint? ... (No) / Yes
+    √ Would you like to use Tailwind CSS? ... (No) / Yes
+    √ Would you like to use `src/` directory? ... (No) / Yes
+    √ Would you like to use App Router? (recommended) ... No / (Yes)
+    √ Would you like to customize the default import alias (@/*)? ... (No) / Yes
+
+No Js existem duas maneiras de criar um função:
+- function
+
+      function functionName (){
+      console.log('this is a example for function')
+      }
+
+- const
+
+      const consName = () => {
+      console.log('this is a example for const')
+         }
+              
 
 
 
@@ -69,5 +115,6 @@ svg: um grafico em forma de vetor para design, não é pixel
   - VIII: DIsponibilidade e  Confiabilidade
  
    Pasta com codigos ja copiado e disponivel nos repositorios no autor.
+   
    
 
