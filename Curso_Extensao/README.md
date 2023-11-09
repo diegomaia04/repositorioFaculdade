@@ -40,10 +40,11 @@ NPX: quando voce quer usar algum recurso sem precisar instalar localmente
 
 🤖[Correção do caminho do Node.js](https://www.youtube.com/watch?v=hiVKXJ2hAdo)
 
+======================================================
     
     npx create-next-app petWeb-app 
 
-  -----------
+ ======================================================
 
 etapas:
 
@@ -68,13 +69,13 @@ No Js existem duas maneiras de criar um função:
          }
               
 
-
-
 ### Aula 01/11
 
 🤖[link para o app desenvolvido por completo](https://www.figma.com/file/XE9XsuUQTsONLnc0o7ooo6/Pet-Web-App?type=design&node-id=0-1&mode=design&t=72AfLFYnd6Y6DAjs-0)🤖
 
 * Ver aula gravada no dia 25/10, repassar conteudo e desenvolver ideias no readme.me
+
+* scrumfast, app de desevolvimento para a realização de tarefas e organização.
 
 #### MVP
 ##### minimum viable product / minino produto viavel
@@ -115,6 +116,23 @@ No Js existem duas maneiras de criar um função:
   - VIII: DIsponibilidade e  Confiabilidade
  
    Pasta com codigos ja copiado e disponivel nos repositorios no autor.
+
+   - firebase: fornece uma documentação detalhada e SDKs multiplataforma de desenvolvimento de apps que ajudam a criar e entregar apps para iOS, Android, Web, Flutter, Unity e C++. iremos utilizar ele como banco de dados para armazenzar os dados recolhidos no projeto jjuntamente com o app
+
+   -Foi criado um realtime databse no proprio fireabse, onde sera um banco de dados non-sequeal, ou seja, um banco de dados nao relacional
+
+     -  O identificador exclusivo global do seu projeto usado no URL do Realtime Database: 
+
+            pet-web-app-a71b4
    
+   - google analytis: só precisa ativar acso voce queira ter daods sobre quem acessou, o tempo que acada usuarios apssou no site e etc
+
+[url do banco de daods criado](https://pet-web-app-a71b4-default-rtdb.firebaseio.com/)
+
+* muitos termos tecnicos sobre programação e sobre codigos que irao beneficar sobre a logica de programação nas ualas, dar uma revisada e praticar com nos aplicativos
+
+[site utilizado para ajudar o desenvolvedor a criar codigos ou ate mesmo montar codigos com exemplos de ccodigos ja prontos.l](https://developer.mozilla.org/pt-BR/)
+
+  
    
 
