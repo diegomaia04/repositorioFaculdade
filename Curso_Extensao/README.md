@@ -1,6 +1,6 @@
 # Lógica, algoritmos e programação e orientação a objetos - Aulas
 
-### Aula 18/10
+## Aula 18/10
 * Ideação!
 
 * Apresentação do Curso e do professor
@@ -17,7 +17,7 @@ svg: um grafico em forma de vetor para design, não é pixel
 
 * foi utilizado o desing feito pelo professor pois ja esta sendo utilizado o usso de vgs e ideias do proprio.
 
-### Aula 25/10
+## Aula 25/10
 
 - SCRUMFAST: é um framework leve que ajuda as pessoas, times e organizações a gerar valor por meio de soluções adaptativas para problemas complexos. Ele é baseado no empirismo e no Lean Thinking, e é construído sobre a inteligência coletiva das pessoas que o utilizam.
        Forma de acompanhamento agil de um projeto.
@@ -69,7 +69,7 @@ No Js existem duas maneiras de criar um função:
          }
               
 
-### Aula 01/11
+## Aula 01/11
 
 🤖[link para o app desenvolvido por completo](https://www.figma.com/file/XE9XsuUQTsONLnc0o7ooo6/Pet-Web-App?type=design&node-id=0-1&mode=design&t=72AfLFYnd6Y6DAjs-0)🤖
 
