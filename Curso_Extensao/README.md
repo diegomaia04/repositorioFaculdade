@@ -1,6 +1,6 @@
 # Lógica, algoritmos e programação e orientação a objetos - Aulas
 
-## Aula 18/10
+### Aula 18/10
 * Ideação!
 
 * Apresentação do Curso e do professor
@@ -17,7 +17,7 @@ svg: um grafico em forma de vetor para design, não é pixel
 
 * foi utilizado o desing feito pelo professor pois ja esta sendo utilizado o usso de vgs e ideias do proprio.
 
-## Aula 25/10
+### Aula 25/10
 
 - SCRUMFAST: é um framework leve que ajuda as pessoas, times e organizações a gerar valor por meio de soluções adaptativas para problemas complexos. Ele é baseado no empirismo e no Lean Thinking, e é construído sobre a inteligência coletiva das pessoas que o utilizam.
        Forma de acompanhamento agil de um projeto.
@@ -69,7 +69,7 @@ No Js existem duas maneiras de criar um função:
          }
               
 
-## Aula 01/11
+### Aula 01/11
 
 🤖[link para o app desenvolvido por completo](https://www.figma.com/file/XE9XsuUQTsONLnc0o7ooo6/Pet-Web-App?type=design&node-id=0-1&mode=design&t=72AfLFYnd6Y6DAjs-0)🤖
 
@@ -132,6 +132,31 @@ No Js existem duas maneiras de criar um função:
 * muitos termos tecnicos sobre programação e sobre codigos que irao beneficar sobre a logica de programação nas ualas, dar uma revisada e praticar com nos aplicativos
 
 [site utilizado para ajudar o desenvolvedor a criar codigos ou ate mesmo montar codigos com exemplos de ccodigos ja prontos.l](https://developer.mozilla.org/pt-BR/)
+
+### Aula 08/11
+
+Para comentar algo no vsc utilize o comando:
+     
+       ctrl + ";"
+
+
+* Para cada atualização do codigo retirada do github e reutulizada no vsc é preicos dar os eguintes comandos para poder rodar o ambinte de ddesevolvimento:
+
+      npm install -g webpack-dev-server
+      npm install
+      npm run build
+      npm run dev
+
+
+* ### A documentação do codgio esta no repositorio do professor, em um fork *
+
+* nessa aula foi realizada a configuração do banco de dados nosql, o professor disponibilizou um arquivo json para a criação dos campos e variaveis do banco
+
+### ATENÇÃO
+
+* o codigo esta imcopleto no atual repositorio, ver fork fornecido pelo prorpio ator do reporitsorio.
+
+- codigo em arquivo json ja disponivel no github.
 
   
    
