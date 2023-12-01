@@ -158,6 +158,48 @@ Para comentar algo no vsc utilize o comando:
 
 - codigo em arquivo json ja disponivel no github.
 
-  
-   
+### aula 22/11
 
+- a avaliação do cruso sera ir atras de um ONG para sugerir a aplicação do projeto quee estamos estudando
+
+- Esta aula é mais uma continuação da aula do dia 08, para a continuação da pagina e do sistema
+
+* UseEffect: meteodo usado para mostar detalhes para a melhora do site, isso mostra  um efeito para a parte de front-end
+
+- pro meio do comando npm instalamos uma dependecia do firebase (banco de dados nao relacional que etsams usando), oc odigo usano e os passos a seguir
+  
+  ```
+  npm i firebase-admin
+  ```
+ 
+ - Esse codigo gerencia o firebase como adm no backend, como edtamos usando o node, precisamos instalar essa dependecia
+
+ - fetch: o fetch API é uma interface JavaScript moderna para fazer requisições HTTP/HTTPS de forma assíncrona. Essa API permite que os desenvolvedores criem aplicações web mais interativas e dinâmicas, oferecendo uma maneira mais intuitiva e fácil de realizar chamadas de rede.
+
+    * nos utilizaremos do fetch APi para o back-end para dai do backend pegarmos a informações do banco de dados (firebase)
+
+   * criamos uma pasta dentro da pasta pages chamada api, nesta pasta vamos colocar e contruir todos os codigos refernetes ao backend do projeto
+
+   dentro dessa pasta criamos outros tres arquivos de javascrip:
+
+   * firebaseApp.js : 
+        - nessa sript vamos usar para a inicialização do banco de dados, usamos um codigo ja fornecido no proprio site do firebase, usamos a linguagem node.js, como o exemplo a seguir
+
+        ```
+        if(!admin.apps.lenght){
+          const firebaseApp = admin.initializeApp({
+          credential: admin.credential.cert(serviceAccount),
+          databaseURL: "https://pet-web-app-a71b4-default-rtdb.firebaseio.com"
+      });
+        ```
+
+        - alem disso geramos uma chave privada para contruir o servico da conta para acessar o bancod e dadso noa relacional, esta logo abaixo onde o codigo acima e disponivilado.
+
+   * getData
+
+
+  
+  
+   * dbFunctions
+
+      - Nessa script usamos para criar o CRUD ( create, reade, update e delete) do nosso banco para nosso projeto, so podemos criar essas funções ápos a criação do firebase, pois precisamos incializar o script para cosneguir ler o banco de dados nao relacional
