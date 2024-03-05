@@ -1,0 +1,36 @@
+/*
+elemento {
+propriedade: valor ;
+}
+*/
+header{
+    background-color: rgb(0, 162, 255);
+    color:aliceblue;
+    font-size: 26px;
+    font-family:sans-serif;
+}
+
+header a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+header a:hover{
+    color: burlywood;
+    font-weight: bold;
+}
+
+header ul{
+    list-style: none;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: rgb(255, 0, 200);
+}

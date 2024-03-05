@@ -1,0 +1,17 @@
+.search-button{
+    background-color: #1370d4;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .search-button:hover {
+        background-color: #1784f9;
+    }
+}
