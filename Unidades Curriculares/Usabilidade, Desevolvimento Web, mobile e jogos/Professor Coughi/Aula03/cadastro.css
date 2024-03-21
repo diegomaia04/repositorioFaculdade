@@ -1,0 +1,55 @@
+body{
+    background-color: wheat;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 300px;
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 2px 10px 2px black;
+}
+
+.dados{
+    display:flex;
+    flex-direction: column;
+}
+
+#formulario{
+    border:  1px solid black;
+    padding: 10px;
+}
+
+#formulario button{
+    width: 100px;
+    background-color: rgb(169, 146, 253);
+    font-style: italic;
+    font-family: fantasy;
+} 
+
+form input{
+    background-color: #cacaca9c;
+    
+}
+
+form .dados{
+    padding: 5px 0;
+}
+
+.dados input:focus{
+     outline: 0;
+}
+
+.dados small{
+    visibility: hidden;
+}
+
+#formulario button{
+    font-size: 16px;
+    border-radius: 15px;
+    cursor: auto;
+}
