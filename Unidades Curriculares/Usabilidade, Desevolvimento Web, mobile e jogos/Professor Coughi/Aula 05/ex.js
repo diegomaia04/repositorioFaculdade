@@ -30,16 +30,16 @@ sexo = "M";
 hemo = 14.5;
 gravida = "S"
 
-if (idade >= 2 && idade < 6 || hemo > 11.5 && hemo <= 13.5) {
+if ((idade >= 2 && idade < 6) || (hemo > 11.5 && hemo <= 13.5)) {
   console.log("o seu nivel esta normal");
-} else if (idade >= 6 && idade <= 12 || hemo > 11.5 && hemo <= 15.5) {
+} else if ((idade >= 6 && idade <= 12) || (hemo > 11.5 && hemo <= 15.5)) {
   console.log("o seu nivel esta normal");
-} else if (sexo === "M" || hemo > 14 && hemo <= 18 ){
+} else if (sexo === "M" && (hemo > 14 && hemo <= 18 )) {
    console.log("o seu nivel esta normal");
-} else if ((sexo === "F" || hemo > 12 && hemo <= 16 )) {
+} else if ((sexo === "F" && hemo > 12 && hemo <= 16 )) {
   console.log("o seu nivel esta normal");
-} else if ((gravida === "S" || hemo == 11 ) {
+} else if (gravida === "S" && hemo == 11 ) {
     console.log("o seu nivel esta normal");
 } else {
-  console.log("o nivel esta alterado")
+  console.log("o nivel esta alterado");
 }
