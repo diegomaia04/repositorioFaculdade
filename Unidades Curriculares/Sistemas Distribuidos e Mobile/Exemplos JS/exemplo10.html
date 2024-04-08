@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Exemplo 10 - switch</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var expr = parseInt(prompt("Informe uma fruta:\n1 - Laranja\n2-cereja\n3-manga\n4-mamão ",""));
+			switch(expr){
+				
+				case 1: alert("as laranjas custam R$ 0,59 o kg");
+				break;
+				case 2: alert("as cerejas custam R$ 3,00 o kg");
+				break;
+				case 3: 
+				case 4: alert("mangas e mamões custam R$ 2,79 o kg");
+				break;
+			default: alert("Desculpa! Não temos a fruta de código" + expr + ".");
+			}
+
+		</script>
+	</body>
+</html>
