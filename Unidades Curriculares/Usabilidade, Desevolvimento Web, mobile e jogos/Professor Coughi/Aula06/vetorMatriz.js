@@ -53,6 +53,12 @@ let pessoas = [
 
 console.log(pessoas) // printa todas as infromações do vetor
 
+let peixes = ["pacu", "salmao", "tilapia"];
+let aves = ["galinha", "aguia", "urubu"];
+let animais = peixes.concat(aves); // junta dois vetores, e necessario cirar um novo vetor ara unir vetores
+console.log(animais);
+console.log(animais.indexOf("galinha"));
+
 
 
 
