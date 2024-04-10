@@ -62,6 +62,7 @@ console.log(animais.indexOf("galinha"));
 // exxercio pra verificar se o nome est contido na variavel
 let vetor = ["calleri", "luciano", "alisson", "rafael", "pablo"]; 
 let nome = "diego";
+//let nome = "luciano";
 
 // esse jeito retorna true or false
 console.log(vetor.includes(nome));
