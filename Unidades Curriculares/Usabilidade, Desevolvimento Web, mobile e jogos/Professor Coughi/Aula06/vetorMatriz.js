@@ -59,6 +59,20 @@ let animais = peixes.concat(aves); // junta dois vetores, e necessario cirar um 
 console.log(animais);
 console.log(animais.indexOf("galinha"));
 
+// exxercio pra verificar se o nome est contido na variavel
+let vetor = ["calleri", "luciano", "alisson", "rafael", "pablo"]; 
+let nome = "diego";
+
+// esse jeito retorna true or false
+console.log(vetor.includes(nome));
+
+// esse jeito vai verificar o nome se esta dentro do vetor utilizando o ifelse 
+if(vetor.indexOf(nome.toLocaleUpperCase) !== -1){
+  console.log("encontrado")
+} else {
+  console.log("não encontrado")
+}
+
 
 
 
