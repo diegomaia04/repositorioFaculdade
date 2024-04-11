@@ -74,6 +74,48 @@ if(vetor.indexOf(nome.toLocaleUpperCase) !== -1){
   console.log("não encontrado")
 }
 
+// let nome = window.prompt("nome : ")
+// alert(nome)
+
+// let num1 = window.prompt("digite um numero: ")
+// let num2 = window.prompt("digite um numero: ")
+
+// let soma = (num1 + num2)
+
+// alert(parseInt(num1) + parseInt(num2))
+
+// let vetor = ["calleri", "luciano", "alisson", "rafael", "pablo"];
+// let nome = window.prompt("digite um nome: ")
+// //let nome = "luciano";
+
+// // esse jeito retorna true or false
+// alert(vetor.includes(nome));
+
+// // esse jeito vai verificar o nome se esta dentro do vetor utilizando o ifelse 
+// if (vetor.includes(nome)) {
+//     alert(`o nome: ${nome} esta dentro do vetor`)
+// } else {
+//     alert(`o nome: ${nome} não esta dentro do vetor`)
+// }
+
+const usuarios = ['joao', "mario", "felipe", ]
+const senhas = [123, 456, 789]
+
+let user = window.prompt("login").toLocaleLowerCase();
+let senha = window.prompt("login").toLocaleLowerCase();
+
+if(usuarios.indexOf(user !== -1 )){
+    if(usuarios.indexOf(user) === senhas.indexOf(senha) {
+        alert("bem vindo")
+    } else {
+        alert("senha invalida")
+    }
+} else {
+    alert("usse invalido")
+}
+
+
+
 
 
 
