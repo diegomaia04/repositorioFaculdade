@@ -1,0 +1,4 @@
+https://thedogapi.com/
+https://api.chucknorris.io/
+https://swapi.dev/api/people/1/
+https://dontpad.com/120424fat
