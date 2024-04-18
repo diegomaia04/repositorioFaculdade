@@ -1,0 +1,83 @@
+:root {
+    --font-color: white;
+    --border-radius: 5px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 100px;
+}
+.title {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.subtitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.text {
+    font-size: 14px;
+}
+.button {
+    background-color: #16986f;
+    margin-top: 40px;
+    color: var(--font-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #17b289;
+}
+
+.button1 {
+    background-color: #16986f;
+    margin-top: 40px;
+    color: var(--font-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.button1:hover {
+    background-color: #17b289;
+}
+
+.button2 {
+    background-color: #16986f;
+    margin-top: 40px;
+    color: var(--font-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.button2:hover {
+    background-color: #17b289;
+}
+
+.button3 {
+    background-color: #16986f;
+    margin-top: 40px;
+    color: var(--font-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.button3:hover {
+    background-color: #17b289;
+}
