@@ -130,7 +130,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     btn.onclick = () => saida.innerHTML = `Olá ${nome.value}`;
 });
-
-
-
-
