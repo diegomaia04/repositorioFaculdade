@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de API</title>
+</head>
+
+<body>
+    <div>
+        <h1>Personagens</h1>
+        <div id="personagens"></div>
+    </div>
+    <div>
+        <h2>Criar personagens</h2>
+        <form id="form-criar-personagem">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" required><br><br>
+            <label for="classe">Classe</label>
+            <input type="text" name="classe" id="classe" required><br><br>
+            <button type="submit">Criar Personagem</button>
+        </form>
+    </div>
+    <script>
+
+        // Função para exibir os personagens
+        function carregarPersonagens() {
+            fetch(" :\Users\maiad\Downloads\APIsmd\index.php")
+                .then((response) => response.json())
+                .then((data) => {
+                    document.getElementById("personagens").innerHTML = JSON.stringify(data, null, 2);
+                })
+                .catch((error) => {
+                    console.error("Erro ao carregar personagens:", error);
+                });
+        }
+
+        // Carregar personagens ao carregar a página
+        window.onload = carregarPersonagens;
+
+        // Adicionar evento de envio para o formulário
+        document.getElementById("form-criar-personagem")
+            .addEventListener("submit", function (event) {
+                event.preventDefault(); // Evitar recarregar a página
+
+                // Obter os valores dos campos do formulário
+                const nome = document.getElementById("nome").value.trim();
+                const classe = document.getElementById("classe").value.trim();
+
+                // Validar entrada
+                if (!nome || !classe) {
+                    alert("Por favor, preencha todos os campos.");
+                    return;
+                }
+
+                // Enviar requisição POST para criar um novo personagem
+                fetch(" C:\Users\maiad\Downloads\APIsmd\index.php", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ nome: nome, classe: classe })
+                })
+                .then((response) => response.json())
+                .then((data) => {
+                    // Atualizar a lista de personagens sem recarregar a página
+                    carregarPersonagens();
+                    // Limpar os campos do formulário
+                    document.getElementById("nome").value = "";
+                    document.getElementById("classe").value = "";
+                })
+                .catch((error) => {
+                    console.error("Erro ao criar personagem:", error);
+                    alert("Erro ao criar personagem. Por favor, tente novamente mais tarde.");
+                });
+            });
+    </script>
+</body>
+
+</html>
