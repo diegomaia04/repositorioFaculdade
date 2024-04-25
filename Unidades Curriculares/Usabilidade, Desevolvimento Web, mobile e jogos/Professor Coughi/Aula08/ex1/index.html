@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Ex1</title>
+</head>
+<body>
+    <div class="container">
+        <h1>ola mundo</h1>
+        <p>
+            Iniciamos o site com "Ola mundo" escrito no h1,
+            mas dentro do js, alteramos o texto do h1 para "Adeus Mundo"</p>
+
+        <p>
+            Para afzer sa lateração do texto de uma Tag HTML dentro do JavaScript,
+            utilizamos <code><strong></strong>innerHTML</code></p>
+    </div>
+
+    <pre>
+    <code>
+ &lt;script&gt;
+    const h1 = document.querySelector('h1')
+    const entrada = window.prompt("Digite sua frase")
+    h1.innerHTML = "Adeus Mundo "
+ &lt;script&gt;
+    </code>
+   </pre>
+
+    <div class="link">
+        <p> <a href="../ex2/index.html" style="text-align: center;">Proxima</a></p>
+        <!-- para ver a pasta anterior e preciso ../ -->
+    </div>
+
+    <script>
+        // declarar uma vari=iavel para alterar o h1
+        const h1 = document.querySelector('h1')
+        const entrada = window.prompt("Digite sua frase")
+        h1.innerHTML = entrada;
+    </script>
+
+</body>
+
+</html>

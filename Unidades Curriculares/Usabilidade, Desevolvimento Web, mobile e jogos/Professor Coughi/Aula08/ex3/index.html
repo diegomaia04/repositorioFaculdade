@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>EX3</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ola Mundo</h1>
+        <button>Clique Aqui!</button>
+    </div>
+
+    <div>
+        <p> nesta pagina vamos fazer alteração do texto da tag h1 quando o o usuario clicr no botao.
+            para fazer isso temos que usar o comando <code><strong>onClick</strong></code></p>
+        <p><code>onClick</code> criara um evento de clic no botao. este evento estara atrelado a uma função</p>
+    </div>
+
+    <pre>
+        <code>
+         &lt;script&gt;
+         let h1 = document.querySelector('h1')
+         const btn = document.querySelector('button')
+ 
+         btn.onclick = function(){
+             h1.innerHTML ="Adeus Mundo"
+         }   
+         &lt;/script&gt;
+        </code>
+    </pre>
+
+    <div class="link">
+        <p><a href="../ex2/index.html">Voltar</a></p>
+        <p><a href="../ex4/index.html">Proximo</a></p>
+    </div>
+
+    <script>
+        let h1 = document.querySelector('h1')
+        const btn = document.querySelector('button')
+
+        btn.onclick = function () {
+            h1.innerHTML = "Adeus Mundo"
+        }
+    </script>
+
+</body>
+
+</html>
