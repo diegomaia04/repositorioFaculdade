@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Documento</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>qualuqer</h1>
+        <input type="text" id="entrada">
+        <button>Clique Aqui</button>
+    </div>
+    <p> nesse site a gente vai atualizar:</p>
+    <ul>
+        <li>atualizar o texto do h1</li>
+        <li>Mudar a cor do texto do h1</li>
+        <li> Mudar a cor de fundo do </li>
+    </ul>
+    <pre><code>
+        document.addEventListener('DOMContentLoaded', () => {
+    const h1 = document.querySelector('h1')
+    const btn = document.querySelector('.button')
+    const entrada = document.querySelector('#entrada');
+
+    btn.onclick = () => {
+        h1.innerHTML = entrada.value;
+
+    }
+})
+    </code></pre>
+
+    <div class="link">
+        <p><a href="../ex5/index.html">anterior</a></p>
+        <p><a href="../ex7/index.html">proximo</a></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
