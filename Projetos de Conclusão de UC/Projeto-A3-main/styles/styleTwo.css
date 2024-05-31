@@ -1,0 +1,134 @@
+.content1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+   background: linear-gradient(0deg, rgb(47, 47, 47), rgb(28, 28, 28), rgb(28, 28, 28)); /* cor do fundo */
+  border-radius: 0 15px 15px 0;
+}
+
+.content2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: linear-gradient(0deg, rgb(35, 35, 35), rgb(28, 28, 28), rgb(28, 28, 28)); /* cor do fundo */
+  border-radius: 0 15px 15px 0;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #42006d;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.cardContent p {
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+
+.about p {
+  text-align: justify;
+  width: 70%;
+}
+
+.cardContent a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.cardContent a:hover {
+  text-decoration: underline;
+}
+
+.cardContent a i {
+  margin-right: 5px;
+}
+.about-content {
+  grid-column: 1 / -1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #8a8888;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: justify;
+  color: #030303;
+}
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: 1px solid #44092b;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.social-icons i {
+  font-size: 2rem;
+
+  transition: color 0.3s, transform 0.3s;
+  background-color: #dc0e8a51;
+  padding: 5px 20px;
+  align-content: center;
+  display: flex;
+  border-radius: 10px;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+}
+
+.cardContent p:last-child {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ffffff;
+}
+@media (max-width: 650px) {
+  main {
+    grid-template-columns: 15% 85%;
+  }
+
+  .content2 {
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 45% 45%;
+    grid-template-areas:
+      "div1"
+      "div2"
+      "div3";
+  }
+}
+
+
+
+
