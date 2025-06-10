@@ -1,6 +1,6 @@
 #  🎯Diego!
 
-Olá Sou Diego Maia Fernandes, tenho 19 anos e estou atualmente cursando Ciências da Computação na Anhembi Morumbi, Sou formado em Técnico em Informatica pelo Senac Tatuápe.
+Olá Sou Diego Maia Fernandes, tenho 21 anos e estou atualmente cursando Ciências da Computação na Anhembi Morumbi, Sou formado em Técnico em Informatica pelo Senac Tatuápe.
 
 Ao longo dessa formação criei projetos que queria compartilhar e receber feedbacks ou algo do gênero. Me sigam no GitHub!
 
